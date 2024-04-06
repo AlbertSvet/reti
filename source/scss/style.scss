@@ -1,0 +1,166 @@
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap&subset=cyrillic-ext');
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "header";
+@import "home";
+@import "footer";
+@import "slide";
+@import "category";
+@import "gpt-chat";
+@import "article";
+@import "random-article";
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+
+//</Шрифт по умолчанию>==========================================================================================
+
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+	
+  }
+
+.page {
+  padding: 0px 0px 0px 0px;
+	flex: 1 1 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+//<Адаптив сетка>===========================================================================================================
+._containerHead {
+	max-width: 1220px;
+	margin: 0px auto;
+	padding: 0px 10px 0px 10px;
+	@media (max-width: 1130px) {
+		max-width: 950px;
+	}
+	@media (max-width: 992px) {
+		max-width: 750px;
+	}
+	@media (max-width: 768px) {
+		max-width: none;
+		padding: 0px 10px;
+	}
+}
+
+._containerSub {
+	max-width: 1180px;
+	margin: 0px auto;
+	padding: 0px 10px 0px 10px;
+	@media (max-width: 1130px) {
+		max-width: 950px;
+	}
+	@media (max-width: 992px) {
+		max-width: 750px;
+	}
+	@media (max-width: 768px) {
+		max-width: none;
+		padding: 0px 10px;
+	}
+}
+
+._container {
+	max-width: 1060px;
+	margin: 0px auto;
+	padding: 0px 10px 0px 10px;
+	@media (max-width: 1130px) {
+		max-width: 950px;
+	}
+	@media (max-width: 992px) {
+		max-width: 750px;
+	}
+	@media (max-width: 768px) {
+		max-width: none;
+		padding: 0px 10px;
+	}
+}
+
+//======Блок с иконкой логотипа================
+
+.Iconblock {
+	display: inline-flex;
+	flex-direction: column;
+	gap: 5px;
+	a{
+		color: rgba(0, 0, 0, 0.9);        
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 18 / 15 *100%; 
+		@media (max-width:768px){
+			font-size: 8px; 
+			}
+		
+	}
+	img{
+		max-height: 47px;
+		max-width: 100%;
+		
+	
+	}
+	 // .Icon-block__iconLink
+
+	&__iconLink {
+		max-width: 121px;	
+		@media (max-width:768px){
+			max-width: 70px;
+		}
+	}
+
+	// .Iconblock__iconLinkTwo
+
+	&__iconLinkTwo {
+	  
+	   &--footer {
+	   }
+	}
+
+
+}
+//===Тайтл
+.titel{
+	color: rgb(0, 0, 0);
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 39 / 32 * 100%;
+	@media (max-width:768px){
+		font-size: 16px;
+	}
+	
+}
+
+//==кнопка в сайт баре====
+.btn{
+    border-radius: 10px;
+    background: rgb(74, 50, 210);
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    width: 100%;    
+    height: 100%;
+    transition: all 0.2s ease 0s;
+	@media (max-width:768px){
+		 font-size: 11px; 
+	}
+    &:hover{
+        background: rgb(139, 119, 255);
+    }
+    &:active{
+        background: rgb(51, 25, 196);
+    }
+   &:disabled{
+        background: rgb(175, 175, 175);
+   }
+}
+

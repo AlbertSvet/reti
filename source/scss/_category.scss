@@ -1,0 +1,461 @@
+.body {
+
+  
+    // .body__container
+
+    &__container {}
+
+    // .body__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 361px 1fr;
+        grid-column-gap: 40px;
+       
+        @media (max-width:768px){
+            grid-template-columns: repeat(1,1fr);
+        }
+        
+    }
+
+    // .body__item-left
+
+    &__item-left {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background: rgb(232, 232, 250);
+        padding: 30px 20px;
+        @media (max-width:768px){
+              grid-row-start: 2;
+        }
+    }
+
+    // .body__advertising
+
+    &__advertising {
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        background: rgba(193, 192, 192, 0.76);
+        margin-bottom: 35px;
+    }
+
+    // .body__become
+
+    &__become {
+        padding: 20px 20px;
+        box-sizing: border-box;
+        border: 1px solid rgb(74, 50, 210);
+        border-radius: 8px;
+        
+    }
+
+    // .body__subTitel
+
+    &__subTitel {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29 / 24 * 100%;
+        
+    }
+
+    // .body__subTitelTwo
+
+    &__subTitelTwo {
+        margin-top: 20px;
+        margin-bottom: 15px;
+
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19 / 16 * 100%;
+        
+    }
+
+    // .body__text
+
+    &__text {
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19 / 16 * 100%;
+       
+    }
+
+    // .body__btn
+
+    &__btn {
+        width: 135px;     
+        height: 47px;  
+    }
+
+    // .body__advertisingTwo
+
+    &__advertisingTwo {
+        border-radius: 10px;
+        background: rgb(217, 217, 217);
+        width: 100%;
+        height: 371px;
+        margin-top: 35px;
+        margin-bottom: 27px;
+    }
+
+    // .body__form
+
+    &__form {}
+
+    // .body__item-right
+
+    &__item-right {
+      
+    }
+
+
+}
+
+//===форма опрос в сайт баре====
+.form {
+    display: grid;
+    // .form__titel
+
+    &__titel {
+        margin-bottom: 25px;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+       
+    }
+
+    // .form__text
+
+    &__text {
+        margin-bottom: 25px;
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        
+    }
+
+    // .form__block
+
+    &__block {
+        display: flex;
+        align-items: center;
+        
+        margin-bottom: 17px;
+        
+        label{
+            color: rgba(0, 0, 0, 0.75);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            position: relative;
+            padding-left: 30px;
+            &::before{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 17px;
+                height: 17px;
+                background-color: #ffff;
+                border-radius: 50%;
+                cursor: pointer;
+                
+            }
+            &::after{
+                content:'';
+                border-radius: 50%;
+                background-color: #60606000;
+                transition: all 0.5s ease 0s;
+                cursor: pointer;
+            }
+        }
+        input{
+            width: 17px;
+            height: 17px;
+            display: none;
+           
+        }
+            
+        input:checked + label::after{          
+            
+            content:'';
+                position: absolute;
+                top: 3px;
+                left: 3px;                
+                width: 11px;
+                height: 11px;
+                background-color: #606060;
+                border-radius: 50%;
+            
+        }
+       
+    }
+
+    // .form__btn
+
+    &__btn {
+        width: 135px;     
+        height: 47px;
+        margin-top: 17px;
+        
+    }
+   
+}
+
+// Правый блок ссылки 
+.block-header {
+
+
+    // .block-header__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        grid-gap: 8px;
+        @media (max-width:992px){
+            grid-template-columns: repeat(3,1fr); 
+            grid-column-gap: 19px;
+            grid-row-gap: 14px;  
+            
+        }
+        @media (max-width:768px){
+            grid-template-columns: repeat(3,1fr); 
+            grid-column-gap: 19px;
+            grid-row-gap: 14px;
+        }
+    }
+
+		// .block-header__titel
+
+		&__titel {
+            display: none;
+            @media (max-width:768px){
+                  display: block;
+                  text-align: center;
+                  color: rgb(0, 0, 0);
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 19px;
+                  margin-bottom: 30px;
+               
+            }
+        }
+
+
+
+    // .block-header__item
+
+    &__item {
+        box-sizing: border-box;
+        border: 1px solid rgb(74, 50, 210);
+        border-radius: 5px;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            background: rgb(139, 119, 255);
+            border: 1px solid rgba(74, 50, 210, 0);         
+           
+        }
+        @media (max-width:992px){
+            &:nth-child(n + 28) {
+                display: none;
+            } 
+        }
+        @media (max-width:768px){
+            border-radius: 10.5px;
+            &:nth-child(n + 19) {
+                display: none;
+            } 
+        }
+       
+        a{
+            color: rgb(74, 50, 210);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            display: flex;
+            justify-content: center;
+            padding: 9px 0px;
+            transition: all 0.3s ease 0s;
+            @media (max-width:768px){
+                font-size: 10.46px;
+                padding: 9.91px 0px;
+            }
+            &:hover{
+                color: rgb(255, 255, 255);     
+            }
+           
+            &:disabled{
+                color: rgb(255, 255, 255);  
+                background: rgb(175, 175, 175);      
+            }
+
+            &:active{
+                color: rgb(255, 255, 255);
+                background: rgb(51, 25, 196);
+               
+            }        
+        }
+        
+    }
+}
+// Основной блок карточки 
+.block-body {
+    margin-top: 90px;   
+
+
+   
+
+    @media (max-width:768px){
+          margin-top: 60px;
+    }
+
+    // .block-body__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 28px;
+        grid-row-gap: 37px;
+       @media (max-width:992px){
+        grid-template-columns: repeat(1,1fr);
+       }
+    }
+
+
+
+    // .block-body__item
+
+    &__item {
+        box-sizing: border-box;
+        border: 1px solid rgb(74, 50, 210);
+        border-radius: 8px;
+        padding: 26px 24px 30px 24px;   
+        &--icon{
+            position: relative;
+            &::before{
+                content:'';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 65.23px;
+                height: 65.23px;
+                background-image: url("../img/icon-top.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }     
+        }
+       
+    }
+
+    // .block-body__img
+
+    &__img {
+        margin-bottom: 19px;
+        @media (max-width:768px){
+            text-align: center;
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+
+    // .block-body__titel
+
+    &__titel {
+        margin-bottom: 15px;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24 / 20 * 100%;
+        @media (max-width:768px){
+            text-align: center;
+            font-size: 16px;
+        }
+        @media (max-width:600px){
+            text-align: left;  
+         }
+       
+    }
+
+    // .block-body__text
+
+    &__text {
+        margin-bottom: 19px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19 / 16 * 100%;
+        @media (max-width:768px){
+            text-align: center;
+            font-size: 10px;
+            margin-bottom: 15px;
+        }
+        @media (max-width:600px){
+           text-align: left;  
+        }
+    }
+
+    // .block-body__link
+
+    &__link {
+        display: flex;
+        gap: 8px;
+        a{
+            box-sizing: border-box;
+            border: 0.47px solid rgb(74, 50, 210);
+            border-radius: 4.68px; 
+            color: rgb(74, 50, 210);
+            font-size: 9.35px;
+            font-weight: 400;
+            // line-height: 11px;
+            padding: 5.5px 13.5px;    
+            @media (max-width:768px){
+                font-size: 8.71px;
+            }       
+            transition: all 0.3s ease 0s;
+            &:hover{
+                border: 0.47px solid rgba(74, 50, 210, 0);
+                background: rgb(139, 119, 255);
+                color: rgb(255, 255, 255);
+            }
+            &:active{
+                border: 0.47px solid rgba(74, 50, 210, 0);
+                background: rgb(51, 25, 196);
+                color: rgb(255, 255, 255);
+            }
+           &:disabled{
+             border: 0.47px solid rgba(74, 50, 210, 0);
+                background: rgb(175, 175, 175);
+                color: rgb(255, 255, 255);
+           }
+        }
+        @media (max-width:768px){
+            justify-content: center;
+        }
+        @media (max-width:600px){
+            justify-content: start;   
+        }
+    }
+}
+
+.margin-category{
+    margin: 90px 0px 120px 0px;
+    min-height: 227px;
+    background-color: #D9D9D9;
+    &.border{
+        border-radius: 10px;
+    }
+    @media (max-width:768px){
+        margin: 60px 0px 120px 0px; 
+    }
+}
+.border{
+    border-radius: 10px;
+}

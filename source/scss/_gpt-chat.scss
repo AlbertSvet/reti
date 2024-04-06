@@ -1,0 +1,308 @@
+
+.card {
+
+    // .card__block
+
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        @media (max-width:1130px){
+             gap: 10px; 
+        }
+        @media (max-width:992px){
+              display: block;
+            
+        }
+    }
+
+    // .card__img
+
+    &__img {
+        width: 50%;
+        max-height: 295px;
+        border-radius: 10px;
+        overflow: hidden;
+        // text-align: center;
+        img{
+            width: 100%;
+            height: 100%;
+            max-width: 360px;
+            // object-fit: cover;
+        }
+        @media (max-width:992px){
+              width: 100%;
+        }
+        @media (max-width:768px){
+            text-align: center;
+        }
+    }
+
+    // .card__item
+
+    &__item {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media (max-width:992px){
+            width: 100%;
+            margin-top: 30px;
+      }
+      @media (max-width:768px){
+            max-width: 360px;
+            margin: 0 auto;
+      }
+    }
+
+    // .card__titel
+
+    &__titel {
+        margin-bottom: 20px;
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 39px;
+        @media (max-width:768px){
+              margin-bottom: 29px;
+              font-size: 16px;
+        }
+      
+    }
+
+    // .card__link
+
+    &__link {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 13px;
+        a{
+            color: rgb(74, 50, 210);
+            font-size: 9.35px;
+            font-weight: 400;
+            line-height: 11px;
+
+            box-sizing: border-box;
+            border: 0.47px solid rgb(74, 50, 210);
+            border-radius: 4.68px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 65px;
+            min-height: 22.5px;
+            @media (max-width:768px){
+                font-size: 9.35px;
+          }
+        }
+        @media (max-width:768px){
+            margin-bottom: 22px;
+         }
+    }
+
+    // .card__subtitel
+
+    &__subtitel {
+        margin-bottom: 20px;
+
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16px;
+        @media (max-width:768px){
+            margin-bottom: 21px;
+            font-size: 10px;
+      }
+        
+    }
+
+    // .card__text
+
+    &__text {
+        margin-bottom: 20px;
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        @media (max-width:768px){
+            margin-bottom: 39px;
+            font-size: 10px;
+      }
+    }
+
+    // .card__btn
+
+    &__btn {
+        height: 60px;
+        max-width: 253px;
+        @media (max-width:768px){
+              width: 170px;
+              height: 40px;
+        }
+    }
+
+
+    // .card__description
+
+    &__description {
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19 / 16 * 100%;
+       
+        margin-top: 70px;
+        margin-bottom: 109px;
+        p{
+            margin-bottom: 25px;
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        @media (max-width:768px){
+              font-size: 10px;
+              margin-top: 60px;
+              margin-bottom: 60px;
+              p{
+                margin-bottom: 14px;
+              }
+        }
+    }
+
+  
+
+		// .card__block-video
+
+		&__block-video {
+            margin-bottom: 120px;
+            @media (max-width:768px){
+                 margin-bottom: 56px; 
+            }
+        }
+
+		// .card__video
+
+		&__video {
+            margin-bottom: 60px;
+            text-align: center;
+            video{
+                max-width: 640px;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+            @media (max-width:768px){
+                margin-bottom: 40px;
+            }
+        }
+
+		// .card__video-description
+
+		&__video-description {
+            max-width: 656px;
+           margin: 0 auto;
+        }
+
+		// .card__titel-video
+
+		&__titel-video {
+            color: rgb(0, 0, 0);
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24 / 20 * 100%;
+            margin-bottom: 20px;
+            @media (max-width:768px){
+                font-size: 16px;
+                 margin-bottom: 23px; 
+            }
+        }
+
+		// .card__text-video
+
+		&__text-video {
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19 / 16 * 100%;
+            @media (max-width:768px){
+                font-size: 10px;
+                line-height: 12 / 10 * 100%;
+            }
+            
+        }
+
+
+
+            // .card__similar-neural
+    
+            &__similar-neural {}
+    
+            // .card__titelTwo
+    
+            &__titelTwo {
+                margin-bottom: 40px;
+                color: rgb(0, 0, 0);
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 39px;
+               @media (max-width:768px){
+                 font-size: 16px; 
+                 margin-bottom: 56px;
+               }
+            }
+    
+            // .card__grid
+    
+            &__grid {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-column-gap: 14px;
+                @media (max-width:768px){
+                    grid-template-columns: repeat(1, minmax(200px, 300px));
+                    justify-content: center;
+                    grid-row-gap: 35px;
+                  }
+            }
+    
+            // .card__itemGrid
+    
+            &__itemGrid {
+                
+                img{
+                    width: 100%;
+                    max-height: 182px;
+                    display: block;
+                    margin-bottom: 19px;
+                    @media (max-width:768px){
+                         margin-bottom: 23px; 
+                         max-height: 230px;
+                        
+                    }
+                }
+            }
+    
+            // .card__subtitelGrid
+    
+            &__subtitelGrid {
+                color: rgba(0, 0, 0, 0.92);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19 / 16 * 100%;
+                span{
+                    display: none;
+                }
+                @media (max-width:768px){
+                     font-size: 11px; 
+                    //  line-height: 11px;
+                     span{
+                        display: inline;
+                    }
+                }
+               
+            }
+    
+    
+
+
+
+}
+

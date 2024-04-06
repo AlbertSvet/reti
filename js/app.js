@@ -267,7 +267,7 @@ formComment.addEventListener('submit', function(e){
 //==================превью файла загрузки 
 const btnPrevie = document.querySelector('[data-clickFile]');
 const blockPrevie = document.getElementById('BlockPrevie');
-
+if(btnPrevie){
 btnPrevie.addEventListener('change', ()=>{
     uploadFile(btnPrevie.files[0]);
 })
@@ -291,4 +291,4 @@ function uploadFile(file) {
     }
     reader.readAsDataURL(file);
 }
-// console.log(btnPrevie)
+}
